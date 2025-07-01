@@ -6,7 +6,7 @@ using namespace std;
 class Solution {
 public:
     int maxProduct(vector<int> arr) {
-        sort(arr.begin(), arr.end());
+        /*sort(arr.begin(), arr.end());  takes the order of nlogn
         int n = arr.size();
         
         // Case 1: Product of top 3 largest elements
@@ -15,7 +15,7 @@ public:
         // Case 2: Product of 2 smallest and the largest (handles negatives)
         int product2 = arr[0] * arr[1] * arr[n-1];
         
-        return max(product1, product2);
+        return max(product1, product2);*/
     }
 };
 

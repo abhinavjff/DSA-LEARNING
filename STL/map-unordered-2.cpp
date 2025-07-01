@@ -9,7 +9,7 @@ int main ()
     //ways to access the elements
     cout<<mp[1]<<endl;//uses the [] operator 
 
-    cout<<mp.at(2);//uses the .at operator and can use it for updating too
+    cout<<mp.at(2)<<endl;//uses the .at operator and can use it for updating too
 
     //using the find operator
     auto it = mp.find(2);
