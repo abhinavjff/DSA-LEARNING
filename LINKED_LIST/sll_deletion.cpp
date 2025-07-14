@@ -45,18 +45,29 @@ Node* ConvertArrToLL(vector<int> &arr){
     return head;
 }
 
-int deletehead(Node* head)
+void print(Node* head)
+{
+    while(head!=NULL)
+    {
+        cout<<head->data<<" ";
+        head=head->next;
+    }
+    cout<<endl;
+}
+Node* deletehead(Node* head)
 {
     Node* temp=head;
     head=head->next;
     free(temp);
-    return head->data;
+    return head;
 }
 
 int main()
 {
     vector<int> arr={2,5,8,7};
     Node* head=ConvertArrToLL(arr);
-    cout<<"new head after deletion "<<deletehead(head);
+    head=deletehead(head);
+    print(head);
+    
 
 }
