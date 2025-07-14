@@ -56,17 +56,38 @@ void print(Node* head)
 }
 Node* deletehead(Node* head)
 {
+    if(head==NULL){return head;}
     Node* temp=head;
     head=head->next;
     free(temp);
     return head;
 }
 
+Node* deleteTail(Node* head)
+{
+    if(head==NULL || head->next==NULL) return NULL;//either an empty linked list or a linked list with only one node 
+    Node* temp=head;
+    while(temp->next->next!=NULL)
+    {
+        temp=temp->next;
+    }
+    free(temp->next);
+    temp->next=nullptr;
+    return head;
+}
+
 int main()
 {
     vector<int> arr={2,5,8,7};
+
     Node* head=ConvertArrToLL(arr);
-    head=deletehead(head);
+
+    //REMOVE THE HEAD AND RETURN THE LINKED LIST ie 5,8,7
+    head=deletehead(head);  
+    print(head);
+
+    //REMOVE THE TAIL AND RETURN THE LINKED LIST ie 5,8
+    head=deleteTail(head);
     print(head);
     
 
