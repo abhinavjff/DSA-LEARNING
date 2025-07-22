@@ -1,17 +1,29 @@
-#include <stack>
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
+void print(stack<int> st) {
+    while (!st.empty()) {
+        cout << st.top() << " ";
+        st.pop();
+    }
+}
+
 int main() {
-    stack<int> s;
-    s.push(10);     // stack: [10]
-    s.push(20);     // stack: [10, 20]
-    s.push(30);     // stack: [10, 20, 30]
-
-    cout << "Top: " << s.top() << endl;  // 30
-    s.pop();     // removes 30
-    cout << "Top after pop: " << s.top() << endl;  // 20
-
-    cout << "Is empty? " << s.empty() << endl;  // 0 (false)
+    
+    // Declare empty stack
+    stack<int> st1;
+    
+    // Insert elements into stack
+    st1.push(10);
+    st1.push(20);
+    st1.push(30);
+    st1.push(40);
+    
+    // Create another stack from st1
+    stack<int> st2(st1);
+    
+    print(st1);
+    cout << endl;
+    print(st2);
     return 0;
 }
