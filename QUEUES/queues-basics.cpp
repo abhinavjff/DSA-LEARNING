@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    queue<int> q;
+    q.push(3);
+    q.push(4);
+    q.push(5);
+
+     // Accessing the front and back elements
+    cout << q.front() << endl;
+    cout << q.back();
+    
+    while (!q.empty())
+    {
+        cout << q.front() << " ";
+        q.pop();
+    }
+
+    return 0;
+}
